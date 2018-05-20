@@ -3,8 +3,8 @@
 
 Puppet::Parser::Functions.newfunction(
   :file_or_empty_string,
-  :type => :rvalue,
-  :doc  => <<-EOS
+  type: :rvalue,
+  doc: <<-EOS
   Return the contents of a file.  Multiple files
   can be passed, and the first file that exists will be read in.
   EOS

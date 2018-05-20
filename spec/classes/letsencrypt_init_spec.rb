@@ -12,9 +12,6 @@ describe 'letsencrypt', type: :class do
     }
   end
 
-  it { is_expected.to contain_file('/etc/letsencrypt').with_ensure('directory') }
-  it { is_expected.to contain_file('/etc/letsencrypt/csr').with_ensure('directory') }
-  it { is_expected.to contain_file('/etc/letsencrypt/private').with_ensure('directory') }
-  it { is_expected.to contain_file('/etc/letsencrypt/certs').with_ensure('directory') }
+  it { is_expected.to contain_class('::letsencrypt') }
 end
 # rubocop:enable LineLength

@@ -1,7 +1,6 @@
 
 require 'puppetlabs_spec_helper/module_spec_helper'
 require 'rspec-puppet-facts'
-require 'fakefs/spec_helpers'
 
 begin
   require 'spec_helper_local' if File.file?(File.join(File.dirname(__FILE__), 'spec_helper_local.rb'))
@@ -28,7 +27,6 @@ if File.exist?(default_module_facts_path) && File.readable?(default_module_facts
 end
 
 RSpec.configure do |c|
-  c.include FakeFS::SpecHelpers
   c.default_facts = default_facts
   c.before :each do
     # set to strictest setting for testing
